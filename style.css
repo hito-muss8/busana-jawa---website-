@@ -1,0 +1,359 @@
+/* === GLOBAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* cegah scroll horizontal */
+}
+
+body {
+    font-family: "Manrope", serif;
+    color: #f5e7d3;
+    background: #0f0f0f; /* hanya warna solid */
+}
+
+.home {
+    min-height: 100vh;
+    padding-top: 140px;
+
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+        url(image/bg.png);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.anggota-section {
+    background: #0f0f0f;
+    padding: 80px 40px;
+}
+
+
+/* === NAVBAR === */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0,0,0,0.15); /* tipis, elegan */
+    backdrop-filter: blur(12px);   /* inti dari efek kaca */
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 999;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b8943c;
+}
+
+.logo-icon img {
+    width: 85%;
+    height: 85%;
+    object-fit:contain;
+    margin-left: 3px;
+    margin-bottom: 3px;  
+    object-position: center;
+    display: block;
+
+}
+
+/* Text di sebelah logo */
+.logo-text h1 {
+    font-size: 20px;
+}
+
+.logo-text p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* === NAV MENU === */
+.nav-menu a {
+    margin-left: 20px;
+    color: #e6d5b8;
+    text-decoration: none;
+    border: 1px solid #6b5c3a;
+    padding: 10px 18px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    background: #b8943c;
+    color: #000;
+}
+
+/* === HERO SECTION === */
+.home h2 {
+    font-style: italic;
+    font-size: bold;
+    color: #e5c677;
+    font-size: 60px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.home h2:first-child {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 22px;
+    line-height: 1.6;
+    width: 70%;
+    margin: 0 auto 40px auto;
+    color: #e8d7b7;
+}
+
+/* === BUTTONS === */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn {
+    padding: 15px 35px;
+    border-radius: 18px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.gold {
+    background: #b8943c;
+    color: #000;
+}
+
+.gold:hover {
+    background: #e5c677;
+}
+
+.blue {
+    background: #163c4c;
+    color: #d6dfdf;
+}
+
+.blue:hover {
+    background: #1f596b;
+}
+
+/* === SCROLL INDICATOR === */
+.scroll-indicator {
+    font-size: 38px;
+    margin-top: 60px;
+    opacity: 0.6;
+}
+
+.anggota-section h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #e1b850; /* warna emas sesuai border card */
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.anggota-container {
+    width: 100%;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.anggota-container h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.anggota-container p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 50px;
+}
+
+.anggota-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.anggota-card {
+    width: 280px;
+    padding: 25px;
+    border-radius: 22px;
+    background: linear-gradient(to bottom right, #1b1b1b, #0f0f0f);
+    border: 1px solid rgba(209, 170, 74, 0.35);
+    box-shadow: 0 0 15px rgba(209, 170, 74, 0.1);
+    text-align: left;
+    background: #6c5113;
+}
+
+.anggota-foto {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: #222;
+    margin-bottom: 15px;
+}
+
+.anggota-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* supaya proporsinya tetap */
+    border-radius: 12px; /* sama kaya div sebelumnya */
+}
+
+.anggota-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.anggota-card p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.materi-section {
+    padding: 50px 0;
+    text-align: center;
+    /* background: linear-gradient(135deg, #1b1b1b, #3a3a3a); */
+     background-image: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+        url(image/bg.png);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #d1aa4a;
+    position: relative;
+}
+
+.materi-section h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Slider Container */
+.materi-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Slider Inner */
+.materi-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Tiap Slide */
+.materi-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Konten Slide (kotak) */
+.materi-content {
+    display: flex;
+    background: #0f0f0f;
+    border: 1px solid rgba(209,170,74,0.35);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 30px;
+    box-shadow: 0 0 20px rgba(209,170,74,0.2);
+    width: 90%;
+    min-height: 400px; 
+    min-width: 100px;
+    align-items: center; 
+}
+
+/* Gambar di kiri */
+.materi-content img {
+    width: 45%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Teks di kanan */
+.materi-text {
+    width: 55%;
+    text-align: left;
+}
+
+.materi-text h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.materi-text p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Tombol geser */
+.prev, .next {
+    background-color: rgba(209, 170, 74, 0.8);
+    border: none;
+    color: #000;
+    font-size: 40px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev { left: -60px; }
+.next { right: -60px; }.prev {
+    left: 10px; /* geser ke dalam container */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(209, 170, 74, 1);
+}
